@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>post blog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://scontent.fpat3-3.fna.fbcdn.net/v/t39.30808-6/284705540_1084792408914401_430044043566852024_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=s0EmOZ4NnaMAX-_ybvr&_nc_ht=scontent.fpat3-3.fna&oh=00_AT9wH4Ep0jZuxNRecALLmd7bi54ZgDPWBtSKCSqUvCU9MA&oe=62C1EBB2" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Fenix' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      body::-webkit-scrollbar {
+        width: 15px;               /* width of the entire scrollbar */
+      }
+
+      body::-webkit-scrollbar-track {
+        background: rgb(220,53,69)        /* color of the tracking area */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: white;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 3px solid rgb(220,53,69)  /* creates padding around scroll thumb */
+      }
+        body{
+            font-family: 'Fenix';
+        }
+        .btn{
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            background-color: #B3001F;
+            
+        }
+        .btn:hover{            
+            background-color: red;
+            color: white;          
+
+        }
+        .icon-css:hover{
+           color: #268cdf;
+        }
+        a{
+            color: #B3001F;
+        }
+
+    @media (min-width: 1080px) {
+      .crd {
+        margin-left: 50px;
+      }
+     
+    }
+    @media (max-width: 480px) {
+      h4{
+          font-size: small;
+      }
+      .bio{
+          padding: 20px;
+      }
+      .c{
+          font-size: 30px;
+          font-weight: bold;
+          color: #B3001F;
+      }
+    }
+    </style>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-sm navbar-light bg-danger fixed-top">
+        <a class="navbar-brand" href="http://localhost:3000/"><i class="fa fa-home" aria-hidden="true" style="font-size: 40px"></i> Home</a> 
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                 
+              </ul>
+              <form class="form-group my-2 my-lg-0">
+                <!-- <a href="https://amanpost-blog.herokuapp.com/logout" type="button" class="btn   my-2 my-sm-0" type="submit">log out</a> -->
+
+                  <a href="http://localhost:3000/logout" type="button" class="btn   my-2 my-sm-0" type="submit">logout</a>
+                  
+              </form>
+          </div>
+      </nav>
+      <div class="container-fluid p-5 bg-danger text-center text-white"><br><br>
+          <h1 style="font-weight: bold">Create video </h1>
+      </div><br>
+      <marquee behavior="" direction="">PLEASE POST YOUR BLOG ON THIS WEB SITE IT'S VERY HELP FULL FOR OTHER PEOPLE</marquee>
+
+
+
+
+
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-6 col-12">
+            <img src="https://amanrl.herokuapp.com/wumtjo1ia" class="img-fluid">
+          </div>
+          <div class="col-xl-6 col-12">
+            <div class="card text-left border-0">
+              <img class="card-img-top" src="holder.js/100px180/" alt="">
+              <div class="card-body">
+        <% details.forEach(function(item){ %>
+              <form class="container p-4"  method="post" action="/edit/<%=item._id %>" onsubmit="myFunction()">
+                <div class="form-group">
+                    <div class="form-row">
+                        
+                        <div class="form-group col-md-6">
+                            <label for="exampleFormControlFile1">video</label>
+  
+                            <input type="text" name="img"  class="form-control-file" id="exampleFormControlFile1" required value="<%=(typeof item!='undefined')? item.img:''%>">
+                        </div>
+                      </div>
+                      
+                      
+                    <button type="submit" class="btn btn-danger">  post video  </button>
+                </div>
+              </form>
+            <% }) %>
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div></div><br><br><br><br>
+ <!----------------------    footer start               -->
+
+<!--------------------------------- footer end -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

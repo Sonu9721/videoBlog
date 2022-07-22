@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>login</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://scontent.fpat3-3.fna.fbcdn.net/v/t39.30808-6/284705540_1084792408914401_430044043566852024_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=730e14&_nc_ohc=s0EmOZ4NnaMAX-_ybvr&_nc_ht=scontent.fpat3-3.fna&oh=00_AT9wH4Ep0jZuxNRecALLmd7bi54ZgDPWBtSKCSqUvCU9MA&oe=62C1EBB2" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      body::-webkit-scrollbar {
+        width: 15px;               /* width of the entire scrollbar */
+      }
+
+      body::-webkit-scrollbar-track {
+        background: rgb(220,53,69)        /* color of the tracking area */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: white;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 3px solid rgb(220,53,69)  /* creates padding around scroll thumb */
+      }
+        .card {        
+        box-shadow: 0 15px 25px rgba(27, 24, 24, 0.2);       
+        border-radius: 15px;
+        backdrop-filter: blur(14px);
+        background-color: rgba(255, 255, 255, 0.2);          
+    }
+    a{
+      color: black;
+    }
+    .btn{
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            background-color: #B3001F;
+            
+        }
+        .btn:hover{            
+            background-color: red;
+            color: white;          
+
+        }
+        h2{
+          color: #DC3545;
+        }
+        .img-fluid{
+          -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+
+        @media (min-width: 1440px) {
+      .crd {
+        margin-left: 100px;
+      }
+      .crdd{
+        margin: 20px;
+      }
+    }
+    </style>
+  </head>
+  <body><br><br><br>
+      <div class="container my-5">
+        <div class="row">
+          <div class="col-xl-6 col-12">
+            <img src="./img/login.png" class="img-fluid">
+          </div>
+          <div class="col-xl-6 col-12">
+            <div class="card text-left border-0">
+              <img class="card-img-top" src="holder.js/100px180/" alt="">
+              <div class="card-body">             
+                  <form action="/isLogin" method="post">
+                    <h2>Login <br>
+                      It's quick and easy.</h2><br><br>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                      <button type="submit" class="btn btn-outline-danger">  Login  </button>
+                  </form>   
+              </div>
+             
+            </div>
+          </div>
+        </div>
+      </div></div><br><br><br><br>
+       <!----------------------    footer start               -->
+<!--------------------------------- footer end -->
+     
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

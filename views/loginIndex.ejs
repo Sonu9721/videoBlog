@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Aman blog</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="./img/form.jpg" type="image/x-icon">
+
+    <!-- Bootstrap CSS -->
+    <link href='https://fonts.googleapis.com/css?family=Allura' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Fenix' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      body::-webkit-scrollbar {
+        width: 15px;               /* width of the entire scrollbar */
+      }
+
+      body::-webkit-scrollbar-track {
+        background: rgb(220,53,69)        /* color of the tracking area */
+      }
+
+      body::-webkit-scrollbar-thumb {
+        background-color: white;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 3px solid rgb(220,53,69)  /* creates padding around scroll thumb */
+      }
+        body{
+            font-family: 'Fenix';
+        }
+        .btn{
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            background-color: #B3001F;
+            
+        }
+        .btn:hover{            
+            background-color: red;
+            color: white;          
+
+        }
+        .icon-css:hover{
+           color: #268cdf;
+        }
+        a{
+            color: #B3001F;
+        }
+
+    @media (min-width: 1080px) {
+      .crd {
+        margin-left: 50px;
+      }
+      .bio{
+        position:absolute;
+        margin-left: 1000px;
+      }
+      .end{
+        
+      }
+     
+    }
+    @media (max-width: 480px) {
+      h4{
+          font-size: small;
+      }
+      .bio{
+          padding: 20px;
+      }
+      .c{
+          font-size: 30px;
+          font-weight: bold;
+          color: #B3001F;
+      }
+    }
+    </style>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-sm navbar-light bg-danger fixed-top">
+        <a class="navbar-brand" href="http://localhost:3000/"><i class="fa fa-home" aria-hidden="true" style="font-size: 40px"></i> Home</a> 
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                                 
+              </ul>
+              <form class="form-group my-2 my-lg-0">
+                <% details.forEach(function(item){ %>    
+                  <a class="btn text-white bg-danger my-2 my-sm-0" type="submit"><%= item.userId.fname%></a>
+                  <% }) %>
+                <!-- <a href="https://amanpost-blog.herokuapp.com/logout" type="button" class="btn   my-2 my-sm-0" type="submit">log out</a>
+                <a href="https://amanpost-blog.herokuapp.com/createBlog" type="button" class="btn  my-2 my-sm-0" type="submit">create Blog</a> -->
+
+                  <a href="http://localhost:3000/logout" type="button" class="btn   my-2 my-sm-0" type="submit">logout</a>
+                  <a href="http://localhost:3000/createBlog" type="button" class="btn  my-2 my-sm-0" type="submit">createVideo</a>
+              </form>
+          </div>
+      </nav>
+      <div class="container-fluid p-5 bg-danger text-center text-white"><br><br>
+          <h1 style="font-weight: bold">YOUR Video</h1>
+      </div><br>
+      <marquee behavior="" direction="">CREATE A NEW video</marquee>
+
+
+
+      <div class="container-fluid my-3 p-4">        
+        <div class="row">
+          <% details.forEach(function(item){ %>
+            <div class="col-xl-8 col-12 ">
+              <div class="card text-left shadow crd">
+                <video controls class="videoplay">
+                  <source  class="card-img-top" src="<%= item.img %>">
+                </video>
+                  
+                  <div class="card-body">
+                    
+                    <br>
+                      <!-- <a href="https://amanpost-blog.herokuapp.com/delete/<%= item._id %>" onclick="alert('blog deleted')"
+                        class="btn btn-danger form-group">delete blog</a>
+          
+                        <a href="https://amanpost-blog.herokuapp.com/edit/<%= item._id %>" onclick="alert('edit blog')"
+                          class="btn btn-danger form-group ">edit blog</a> -->
+
+                           <a href="http://localhost:3000/delete/<%= item._id %>" onclick="alert('blog deleted')"
+                            class="btn btn-danger form-group">delete blog</a>
+
+                            <a href="http://localhost:3000/edit/<%= item._id %>" onclick="alert('edit blog')"
+                                class="btn btn-warning form-group ">edit blog</a>
+                  </div>                   
+                </div>
+                <br><br>                 
+            </div>
+            <% }) %>
+
+
+
+
+
+        <!-- ----------------   profile       -->
+              <div class="col-xl-4 col-12 bio"></div>
+          </div>
+      </div>
+      <br><b><br><br><br><br><b><br><br><b><br><br><br><br><br>
+        
+
+ <!----------------------    footer start               -->
+
+      <footer class="bg-danger text-center text-white end">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Form -->
+          <section class="">
+            <form action="">
+              <!--Grid row-->
+              <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-auto">
+                  <p class="pt-2">
+                    <strong>Sign up for our newsletter</strong>
+                  </p>
+                </div>
+                <!--Grid column-->
+      
+                <!--Grid column-->
+                <div class="col-md-5 col-12">
+                  <!-- Email input -->
+                  <div class="form-outline form-white mb-4">
+                    <input type="email" id="form5Example29" class="form-control" placeholder="Email address" />
+
+                  </div>
+                </div>
+                <!--Grid column-->
+      
+                <!--Grid column-->
+                <div class="col-auto">
+                  <!-- Submit button -->
+                  <button type="submit" class="btn  mb-4">
+                    Subscribe
+                  </button>
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </form>
+          </section>
+          <!-- Section: Form -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: #B3001F">
+          © 2022 Copyright:
+          <a class="text-white" href="http://amanpost-blog.herokuapp.com/">amanpost.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+<!--------------------------------- footer end -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
